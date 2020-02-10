@@ -6,15 +6,12 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
-import android.provider.ContactsContract;
 import android.text.Spannable;
 import android.text.SpannableString;
-import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.text.style.ClickableSpan;
-import android.text.style.EasyEditSpan;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.EditText;
@@ -127,7 +124,7 @@ public class LoginActivity extends AppCompatActivity implements Const {
                     Storage.putString(LoginActivity.this,KEY_USERNAME,mLoginData.username);
                     Storage.putString(LoginActivity.this,KEY_PASSWORD,mLoginData.password);          //默认保存密码
                     Storage.putString(LoginActivity.this,KEY_LOGIN_SERVER,mLoginData.loginServer);
-                    Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, ChatActivity.class);
                     startActivity(intent);
                     finish();
                 }else {                                           //失败
